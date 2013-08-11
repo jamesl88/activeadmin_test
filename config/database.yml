@@ -18,8 +18,8 @@ development:
   adapter: postgresql
   encoding: unicode
   database: activeadmin_assessment_development
-  pool: 5
-  username: activeadmin_assessment
+  host: localhost
+  username: jameslieu
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -47,14 +47,8 @@ test:
   adapter: postgresql
   encoding: unicode
   database: activeadmin_assessment_test
-  pool: 5
-  username: activeadmin_assessment
+  host: localhost
+  username: jameslieu
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: activeadmin_assessment_production
-  pool: 5
-  username: activeadmin_assessment
-  password:
+

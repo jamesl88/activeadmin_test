@@ -1,0 +1,24 @@
+<h1>Logs#index</h1>
+<p>Find me in app/views/logs/index.html.erb</p>
+
+<%= form_for :log do |f| %>
+  <div>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+  <div>
+    <%= f.label :procedure %>
+    <%= f.text_field :procedure %>
+  </div>
+  <div>
+    <%= f.label :complications %>
+    <%= f.text_field :complications %>
+  </div>
+  <div>
+    <%= f.label :teaching %>
+    <%= f.text_field :teaching %>
+  </div>
+  <div>
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

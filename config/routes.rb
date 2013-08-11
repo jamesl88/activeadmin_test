@@ -1,4 +1,15 @@
 ActiveadminAssessment::Application.routes.draw do
+ 
+ # root 'logs#index'
+
+  # post "logs/create"
+  # get "logs/new"
+  # post "logs/destroy"
+  # get "logs/show"
+  # get "logs/index"
+
+  resources :logs
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
