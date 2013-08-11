@@ -1,29 +1,26 @@
-<h1>Logs#index</h1>
+<h3>Logbook of Anaestics Competencies for Core Trainees</h3>
 <p>Find me in app/views/logs/index.html.erb</p>
 
-<%= form_for :log do |f| %>
-  <div>
-    <%= f.label :date %>
-    <%= f.date_field :date %>
-  </div>
-  <div>
-    <%= f.label :procedure %>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-  <li><a tabindex="-1" href="#">Action</a></li>
-  <li><a tabindex="-1" href="#">Another action</a></li>
-  <li><a tabindex="-1" href="#">Something else here</a></li>
-</ul>
-    <%= f.text_field :procedure %>
-  </div>
-  <div>
-    <%= f.label :complications %>
-    <%= f.text_field :complications %>
-  </div>
-  <div>
-    <%= f.label :teaching %>
-    <%= f.text_field :teaching %>
-  </div>
-  <div>
-    <%= f.submit "Submit" %>
-  </div>
-<% end %>
+
+  <%= form_for :log do |f| %>
+        <div>
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+        </div>
+        <div>
+        <%= f.label :procedure, "Procedure/Skill" %>
+        <%= f.select :procedure, [['Adult intubation'],['Paediatric Intubation'],['Rapid sequence induction'], ['CVC placement'], ['Spinal anaesthesia'], ['Epidural placement'], ['Other (please specify)']] %>
+        </div>
+        <div>
+        <%= f.label :complications, "Any complications?" %>
+        <%= f.text_field :complications %>
+        </div>
+        <div>
+        <%= f.label :teaching, "Any element of teaching involved?" %>
+        <%= f.select :teaching,[['PTO'],['Core trainer anaesthetics'],['Core trainee'], ['Nurse practitioner'], ['Other (please specify)']] %>
+        </div>
+      <div>
+        <%= f.submit "Submit" %>
+      </div>
+  <% end %>
+

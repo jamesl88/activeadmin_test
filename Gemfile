@@ -27,6 +27,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# cleans up this error : WARN Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+gem 'thin'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -39,6 +42,11 @@ group :test, :development do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
 end
+
+  gem "therubyracer"
+  gem "less-rails"
+  gem 'twitter-bootstrap-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
