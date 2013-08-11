@@ -3,6 +3,9 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+require 'capybara/rails'
+require 'debugger'
+require 'database_cleaner'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -13,6 +16,17 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+
+  config.before(:all) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean
+  end
+  
+  config.before(:each) do
+    DatabaseCleaner.strategy = :truncation#, {:except => %w[products]}
+    ActionMailer::Base.deliveries.clear
+    Product.any_instance.stub(:save_attached_files).and_return(true)
+  end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
