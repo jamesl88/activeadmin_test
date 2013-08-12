@@ -1,0 +1,35 @@
+ <h3>Sign up</h3>
+
+ <%= form_for @user do |f| %>
+        <div>
+        <%= f.label :email, 'Email' %>
+        <%= f.text_field :email, :placeholder => "john@example.com"%>
+        </div>
+        <div>
+        <%= f.label :password, 'Password' %>
+        <%= f.password_field :password, :placeholder => "password" %>
+        </div>
+        <div>
+        <%= f.label :first_name, 'First Name' %>
+        <%= f.text_field :first_name, :placeholder => "First name" %>
+        </div>
+        <div>
+        <%= f.label :last_name, 'Last Name' %>
+        <%= f.text_field :last_name, :placeholder => "Last name" %>
+        </div>
+        <div>
+          <%= f.label :designation %>
+          <%= f.text_field :designation, :placeholder => "e.g. CT1, CT2" %>
+        </div>
+        <div>
+          <%= f.label :start_date %>
+          <%= f.date_field :start_date %>
+        </div>
+        <div>
+          <%= f.label :end_date %>
+          <%= f.date_field :end_date %>
+        </div>
+      <div>
+        <%= f.submit "Submit" %>
+      </div>
+  <% end %>

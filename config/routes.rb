@@ -7,9 +7,14 @@ ActiveadminAssessment::Application.routes.draw do
   # post "logs/destroy"
   # get "logs/show"
   # get "logs/index"
-
+  root "users#index"
   resources :logs
-  resources :users
+  resources :users, :only => [:show, :create, :new] do
+    collection do
+      post 'login'
+      post 'logout'      
+    end
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20130812000255) do
 
   create_table "users", force: true do |t|
     t.string   "email"
-    t.string   "password_hash"
-    t.string   "name"
+    t.string   "password"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "designation"
     t.date     "start_date"
     t.date     "end_date"

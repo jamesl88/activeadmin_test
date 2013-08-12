@@ -1,0 +1,19 @@
+  <h3>Log in</h3>
+
+ <%= form_for :user, :url => login_users_path do |f| %>
+        <div>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+        </div>
+        <div>
+        <%= f.label :password, 'Password' %>
+        <%= f.password_field :password %>
+        </div>
+        <div>
+        <%= f.submit "Submit" %>
+      </div>
+  <% end %>
+
+  <div>
+    <a href='/users/new'>Click here to Sign Up!</a>
+  </div>
