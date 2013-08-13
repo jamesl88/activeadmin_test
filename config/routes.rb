@@ -10,7 +10,7 @@ ActiveadminAssessment::Application.routes.draw do
   # get "logs/show"
   # get "logs/index"
   root "users#index"
-  resources :logs, :only => [:show, :create, :edit, :new]
+  resources :logs, :only => [:show, :create, :edit, :new, :update]
   resources :users, :only => [:show, :create, :new] do
     collection do
       post "/signout" => "users#destroy", :as => :signout

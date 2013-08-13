@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,30 +38,26 @@
     <%= javascript_include_tag "application" %>
 
   </head>
-
   <body>
-
     <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-          
-          <a class="brand" href="/">Logbook of Anaesthetics Competencies for Core Trainees</a>
-          <!-- <div id="user_nav"> -->
-            <% if session[:user_id] %>
+      <div class="navbar-inner">   
+        <a class="brand" href="/">Logbook of Anaesthetics Competencies for Core Trainees</a>
+          <% if session[:user_id] %>
             Signed in as <%= current_user.first_name %> <%= current_user.last_name %> . Not you?
             <%= link_to "Sign out", signout_users_path, :method => :POST %>
-            <% else %>
+          <% else %>
             <button type="button" class="btn btn-default navbar-btn pull-right"><%= link_to "Sign Up", new_user_path %></button>
-              <% end %>
-        <!-- </div> -->
+          <% end %>
       </div>
     </div>
-
     <div class="container">
-        <%= bootstrap_flash %>
-        <%= yield %>
+      <%= bootstrap_flash %>
+      <%= yield %>
     </div>
     <footer>
       <p>&copy; James Lieu 2013</p>
     </footer>
   </body>
+    <p class="notice"><%= notice %></p>
+    <!-- <p class="alert"><%= alert %></p> -->
 </html>

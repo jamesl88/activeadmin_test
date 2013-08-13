@@ -25,6 +25,19 @@ class LogsController < ApplicationController
   def show
   end
 
+    def edit
+    @log = Log.find(params[:id])
+    end
+
+    def update
+    @log = Log.find(params[:id])
+    if @log.update_attributes(log_params)
+      redirect_to log_path(@log)
+    else
+      redirect_to edit_log_path(@log)
+    end
+  end
+
 end
 
 private

@@ -1,0 +1,25 @@
+
+<%= form_for @log do |f| %>
+    <div>
+      <%= f.label :date %>
+      <%= f.date_field :date %>
+    </div>
+    <div>
+    <%= f.label :procedure, "Procedure/Skill" %>
+    <%= f.select :procedure, [['Adult intubation'],['Paediatric Intubation'],['Rapid sequence induction'], ['CVC placement'], ['Spinal anaesthesia'], ['Epidural placement'], ['Other (please specify)']] %>
+    </div>
+    <div>
+      <%= f.label :complications, "Any complications?" %>
+      <%= f.text_field :complications %>
+    </div>
+    <div>
+      <%= f.label :teaching, "Any element of teaching involved?" %>
+      <%= f.select :teaching,[['PTO'],['Core trainer anaesthetics'],['Core trainee'], ['Nurse practitioner'], ['Other (please specify)']] %>
+    </div>
+  <br/>
+  <% if @log.new_record? %>
+    <%= f.submit "Create Log", :class => "btn" %>
+  <% else %>
+    <%= f.submit "Update Log", :class => "btn" %>
+  <% end %>
+<% end %>
