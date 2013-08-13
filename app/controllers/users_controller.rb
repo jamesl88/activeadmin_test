@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def logout
+  def destroy
     session.clear
     redirect_to root_path
   end
@@ -38,6 +38,6 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:email, :password, :first_name, :last_name, :designation)
+    params.require(:user).permit(:email, :password, :first_name, :last_name, :designation, :start_date, :end_date)
   end
 end

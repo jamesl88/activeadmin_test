@@ -1,8 +1,5 @@
-<h3>Logbook of Anaestics Competencies for Core Trainees</h3>
-<p>Find me in app/views/logs/index.html.erb</p>
-
-
-  <%= form_for :log do |f| %>
+  <%= form_for :log, :url => logs_path do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
         <div>
         <%= f.label :date %>
         <%= f.date_field :date %>
@@ -23,4 +20,5 @@
         <%= f.submit "Submit" %>
       </div>
   <% end %>
+
 

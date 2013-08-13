@@ -7,9 +7,11 @@ class LogsController < ApplicationController
   def create
     @log = Log.create!(log_params)
     if @log.save
-      redirect_to logs_path
+      redirect_to user_path(current_user.id)
+      flash[:notice] = "Submitted"
     else
-      render :new
+      flash[:notice] = "Error, competency not submitted"
+      redirect_to user_path(current_user.id)
     end
   end
 
@@ -28,6 +30,6 @@ end
 private
 
   def log_params
-    params.require(:log).permit(:date, :procedure, :complications, :teaching)
+    params.require(:log).permit(:date, :procedure, :complications, :teaching, :user_id)
   end
 

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20130812000255) do
   enable_extension "plpgsql"
 
   create_table "logs", force: true do |t|
+    t.integer  "user_id"
     t.date     "date"
     t.string   "procedure"
     t.string   "complications"

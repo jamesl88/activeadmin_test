@@ -1,33 +1,13 @@
-  <h3>Log in</h3>
+
 <p>Name: <%= @user.first_name %> <%= @user.last_name %> </p>
 <p>Email: <%= @user.email %></p>
 <p>Designation: <%= @user.designation %></p>
 <p>Start Date: <%= @user.start_date %></p>
 <p>End Date: <%= @user.end_date %></p>
 
+<%= render "logs/log_form" %>
+ 
 
-  <%= form_for :log do |f| %>
-        <div>
-        <%= f.label :date %>
-        <%= f.date_field :date %>
-        </div>
-        <div>
-        <%= f.label :procedure, "Procedure/Skill" %>
-        <%= f.select :procedure, [['Adult intubation'],['Paediatric Intubation'],['Rapid sequence induction'], ['CVC placement'], ['Spinal anaesthesia'], ['Epidural placement'], ['Other (please specify)']] %>
-        </div>
-        <div>
-        <%= f.label :complications, "Any complications?" %>
-        <%= f.text_field :complications %>
-        </div>
-        <div>
-        <%= f.label :teaching, "Any element of teaching involved?" %>
-        <%= f.select :teaching,[['PTO'],['Core trainer anaesthetics'],['Core trainee'], ['Nurse practitioner'], ['Other (please specify)']] %>
-        </div>
-      <div>
-        <%= f.submit "Submit" %>
-      </div>
-  <% end %>
-
-<%= form_for :user, :url => logout_users_path do |f| %>
+<%= form_for :user, :url => signout_users_path do |f| %>
     <%= f.submit "Logout" %>
 <% end %>
