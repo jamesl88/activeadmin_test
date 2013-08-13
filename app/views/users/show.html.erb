@@ -1,9 +1,5 @@
 
-<p>Name: <%= @user.first_name %> <%= @user.last_name %> </p>
-<p>Email: <%= @user.email %></p>
-<p>Designation: <%= @user.designation %></p>
-<p>Start Date: <%= @user.start_date %></p>
-<p>End Date: <%= @user.end_date %></p>
+<%= render "users/user_details" %>
 
 <%= render "logs/log_form" %>
  

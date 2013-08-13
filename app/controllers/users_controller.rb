@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   def create
     @user = User.create!(user_params)
     if @user.save
-      redirect_to user_path(@user)
+      redirect_to root_path
+      flash[:notice] = "Sign up sucessful!"
     else
       render :new
     end
