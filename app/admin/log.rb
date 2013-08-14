@@ -4,6 +4,7 @@ ActiveAdmin.register Log do
     column :date
     column "Any complications?", :complications
     column :teaching
+    column :reflection
     default_actions
   end
   
