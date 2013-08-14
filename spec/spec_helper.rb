@@ -4,7 +4,6 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rails'
-require 'debugger'
 require 'database_cleaner'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -23,9 +22,8 @@ RSpec.configure do |config|
   end
   
   config.before(:each) do
-    DatabaseCleaner.strategy = :truncation#, {:except => %w[products]}
+    DatabaseCleaner.strategy = :truncation
     ActionMailer::Base.deliveries.clear
-    Product.any_instance.stub(:save_attached_files).and_return(true)
   end
   # ## Mock Framework
   #
