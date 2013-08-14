@@ -1,7 +1,7 @@
 class LogsController < ApplicationController
   
   def index
-    @logs = Log.all
+    # @logs = Log.all
   end
   
   def create
@@ -23,11 +23,11 @@ class LogsController < ApplicationController
   end
 
   def show
-    @logs = Log.all
+    # @logs = Log.all
     
-    @user_logs = @logs.each do |log|
-      log.user_id
-    end
+    # @user_logs = @logs.each do |log|
+    #   log.user_id
+    # end
   end
 
   def edit
