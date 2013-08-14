@@ -8,5 +8,5 @@
 
   body { 
     padding-top: 40px; 
-    background-image: image-url(<%= asset_path "../images/ps_neutral.png"%>);
+    background-image: image-url("ps_neutral.png");
   }
