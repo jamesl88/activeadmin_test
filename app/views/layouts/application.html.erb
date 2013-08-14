@@ -42,19 +42,21 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">   
         <a class="brand" href="/">Logbook of Anaesthetics Competencies for Core Trainees</a>
+          <div class="current-user-nav">
           <% if session[:user_id] %>
             Signed in as <%= current_user.first_name %> <%= current_user.last_name %> . Not you?
             <%= link_to "Sign out", signout_users_path, :method => :POST %>
           <% else %>
             <button type="button" class="btn btn-default navbar-btn pull-right"><%= link_to "Sign Up", new_user_path %></button>
           <% end %>
+        </div>
       </div>
     </div>
     <div class="container">
       <%= bootstrap_flash %>
       <%= yield %>
     </div>
-    <footer>
+    <footer class="footer">
       <p>&copy; James Lieu 2013</p>
     </footer>
   </body>

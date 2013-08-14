@@ -5,10 +5,11 @@ ActiveAdmin.register_page "Dashboard" do
   content :title => proc{ I18n.t("active_admin.dashboard") } do
      
      section "Recent Logs" do
-        table_for Log.order("procedure").limit(5) do
-            column :procedure do |log|
-                link_to log.procedure, admin_log_path(log)
+        table_for Log.order("date desc").limit(5) do
+            column :date do |log|
+                link_to log.date, admin_log_path(log)
             end
+            column :procedure
             column :teaching
         end
         strong { link_to "View All Procedures", admin_logs_path }
