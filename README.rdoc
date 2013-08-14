@@ -1,28 +1,12 @@
-== README
+== Anaesthetics Logbook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+http://anaesthetics-logbook.herokuapp.com
 
-Things you may want to cover:
+Ruby Developer Assessment
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Build a simple rails app. Write about a gem you used.
+2. Use the ActiveAdmin framework to generate an admin interface to manage users
+3. Present your plan in a doc with user stories.
+4. Upload to github so they can see the specs.
+5. Deploy to heroku.
+6. Prepare a presentation to describe the app and how it helps end users in their day to day life.
