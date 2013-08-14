@@ -23,13 +23,18 @@ class LogsController < ApplicationController
   end
 
   def show
+    @logs = Log.all
+    
+    @user_logs = @logs.each do |log|
+      log.user_id
+    end
   end
 
-    def edit
+  def edit
     @log = Log.find(params[:id])
-    end
+  end
 
-    def update
+  def update
     @log = Log.find(params[:id])
     if @log.update_attributes(log_params)
       redirect_to log_path(@log)
@@ -37,7 +42,6 @@ class LogsController < ApplicationController
       redirect_to edit_log_path(@log)
     end
   end
-
 end
 
 private

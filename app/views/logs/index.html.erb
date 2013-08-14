@@ -9,7 +9,7 @@
     <th>Reflection</th>
   </thead>
   <tbody>
-    <% @user_logs.each do |log| %>
+    <% @logs.each do |log| %>
       <tr>
         <td>
           <%= link_to "Log #{log.id}", log_path(log) %>
