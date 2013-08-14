@@ -43,6 +43,6 @@ end
 private
 
   def log_params
-    params.require(:log).permit(:date, :procedure, :complications, :teaching, :user_id)
+    params.require(:log).permit(:date, :procedure, :complications, :teaching, :user_id, :reflection)
   end
 

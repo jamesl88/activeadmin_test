@@ -7,6 +7,7 @@ class CreateLogs < ActiveRecord::Migration
       t.string :procedure
       t.string :complications
       t.string :teaching
+      t.string :reflection
 
       t.timestamps
     end

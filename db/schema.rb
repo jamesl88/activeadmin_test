@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20130813153408) do
     t.string   "procedure"
     t.string   "complications"
     t.string   "teaching"
+    t.string   "reflection"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
