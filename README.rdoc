@@ -2,6 +2,8 @@
 
 http://anaesthetics-logbook.herokuapp.com
 
+This was my response to a pre-interview test for a London based company
+
 Ruby Developer Assessment
 
 1. Build a simple rails app. Write about a gem you used.
