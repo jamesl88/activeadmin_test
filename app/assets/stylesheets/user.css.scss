@@ -3,7 +3,36 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.center {
+  text-align: center;
+}
 
-// .center {
-//   text-align: center;
-// }
+.sub-title {
+  text-align: center;
+  color:#cccccc ;
+}
+
+.submit {
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.box {
+  border-radius:5%;
+  background:#f3f3f3;
+  padding:40px;
+  // text-align: center;
+}
+
+.form {
+  display:inline-block;
+  width:50%;
+}
+
+.right {
+  float:right;
+}
+
+.navbar-brand {
+  color:#333;
+}

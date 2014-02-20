@@ -1,36 +1,41 @@
-  <div class="log-form">
+  <div class="container">
   <%= form_for :log, :url => logs_path do |f| %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
       <div class="row">
         <div class="span4">
-          <div>
+          
+          <div class="log-form">
             <%= f.label :date %>
             <%= f.date_field :date %>
           </div>
-          <div>
+
+          <div class="log-form">
             <%= f.label :procedure, "Procedure/Skill" %>
             <%= f.select :procedure, [['Select'],['Adult intubation'],['Paediatric Intubation'],['Rapid sequence induction'], ['CVC placement'], ['Spinal anaesthesia'], ['Epidural placement'], ['Other (please specify)']] %>
           </div>
-        </div>
         
-        <div>
-          <%= f.label :complications, "Any complications?" %>
-          <%= f.text_field :complications, :value => "n/a", :onclick => 'this.select();' %>
+          <div class="log-form">
+            <%= f.label :complications, "Any complications?" %>
+            <%= f.text_field :complications, :value => "n/a", :onclick => 'this.select();' %>
+          </div>
+          
+          <div class="log-form">
+            <%= f.label :teaching, "Any element of teaching involved?" %>
+            <%= f.select :teaching,[['n/a'],['PTO'],['Core trainer anaesthetics'],['Core trainee'], ['Nurse practitioner'], ['Other (please specify)']] %>
+          </div>
+
+          <div class="log-form">
+            <%= f.label :reflection, "Any other comments?/Reflection" %>
+            <%= f.text_field :reflection, :value => "n/a", :onclick => 'this.select();' %>
+          </div>
+          
+          <div class="log-form">
+            <%= f.submit "Submit" %>
+          </div>
         </div>
-        <div>
-          <%= f.label :teaching, "Any element of teaching involved?" %>
-          <%= f.select :teaching,[['n/a'],['PTO'],['Core trainer anaesthetics'],['Core trainee'], ['Nurse practitioner'], ['Other (please specify)']] %>
-        </div>
       </div>
-      <div>
-        <%= f.label :reflection, "Any other comments?/Reflection" %>
-        <%= f.text_field :reflection, :value => "n/a", :onclick => 'this.select();' %>
-      </div>
-      <div>
-        <%= f.submit "Submit" %>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 
