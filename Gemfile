@@ -35,6 +35,9 @@ gem 'ransack',             github: 'ernie/ransack'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'formtastic',          github: 'justinfrench/formtastic'
 
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.1.1'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -47,10 +50,6 @@ group :test, :development do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
 end
-
-  gem "therubyracer"
-  gem "less-rails"
-  gem 'twitter-bootstrap-rails'
 
 
 # Use ActiveModel has_secure_password

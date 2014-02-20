@@ -1,22 +1,27 @@
-<div class="hero-unit">
-  <h3>Log in</h3>
-    <%= form_for :user, :url => login_users_path do |f| %>
-      <div>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-      </div>
-      <div>
-        <%= f.label :password, 'Password' %>
-        <%= f.password_field :password %>
-      </div>
-      <div>
-        <%= f.submit "Submit" %>
-      </div>
-    <% end %>
-  <div>
-    <a href='/users/new'>Click here to Sign Up</a>
-  </div>
+<div class='center'><h2>Anaesthetics Logbook</h2></div>
 
-  <!-- <%= link_to "For admin click here", new_admin_user_session_path %> -->
+<div class="row">
+  <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h4>A form to keep a log of skills practiced for Anaesthetics and their consultants to review them</h4>
+
+      <h3>Log in</h3>
+        <%= form_for :user, :url => login_users_path do |f| %>
+          <div>
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+          </div>
+          <div>
+            <%= f.label :password, 'Password' %>
+            <%= f.password_field :password %>
+          </div>
+          <div>
+            <%= f.submit "Submit" %>
+          </div>
+        <% end %>
+      <div>
+        <a href='/users/new'>Click here to Sign Up</a>
+      </div>
+    </div>
+  <div class="col-md-4"></div>
 </div>
-
