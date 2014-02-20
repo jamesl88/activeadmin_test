@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 1.2'
 # cleans up this error : WARN Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
 gem 'thin'
 
-gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'ransack',             github: 'ernie/ransack'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'formtastic',          github: 'justinfrench/formtastic'
