@@ -1,8 +1,9 @@
-== Anaesthetics Logbook
+# Anaesthetics Logbook
 
 http://anaesthetics-logbook.herokuapp.com
 
-The application uses a PostgreSQL databases. Run rake db:create:all to create the databases followed by rake db:migrate.
+    rake db:create:all
+    rake db:migrate
 
 This was my response to a pre-interview test for a London based company
 
