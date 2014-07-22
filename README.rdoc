@@ -15,3 +15,7 @@ Ruby Developer Assessment
 4. Upload to github so they can see the specs.
 5. Deploy to heroku.
 6. Prepare a presentation to describe the app and how it helps end users in their day to day life.
+
+<center>
+<img src="./image.png" width="200px" />
+</center>
