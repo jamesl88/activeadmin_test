@@ -1,4 +1,4 @@
-== Anaesthetics Logbook
+## Anaesthetics Logbook
 
 http://anaesthetics-logbook.herokuapp.com
 
@@ -17,5 +17,5 @@ Ruby Developer Assessment
 6. Prepare a presentation to describe the app and how it helps end users in their day to day life.
 
 <center>
-<img src="./image.png" width="200px" />
+<img src="./image.png" />
 </center>
